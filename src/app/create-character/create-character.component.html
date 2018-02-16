@@ -1,0 +1,16 @@
+
+<form #form="ngForm" (ngSubmit)="formSubmit(form)" class="col-md-4 offset-md-4">
+  <div class="form-group">
+    <label for="name">Enter Name</label>
+    <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Enter Name" ngModel required #input="ngModel">
+    <small id="emailHelp" class="form-text text-muted" *ngIf="input.invalid">Please Enter your Name</small>
+  </div>
+  <div class="form-group">
+    <label for="side">Choose Force Side:</label>
+    <select class="form-control" id="side" name="side" [(ngModel)]="selectedSide"  ngModel>
+      <option *ngFor="let i of allSides" [ngValue]="i">{{ i.option }}</option>
+    </select>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Create Character</button>
+  <button class="btn btn-primary" type="submit" (click)="notifyMe()">Notify Me!!!</button>
+</form>

@@ -1,0 +1,69 @@
+<div class="col-md-4 offset-md-5 padT" *ngIf="dataAvailable">
+  <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+</div>
+<div class="col-md-8 offset-md-2" *ngIf="!dataAvailable">
+  <div>
+<table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
+    <thead>
+    <tr>  
+        <th style="width: 25%">
+            <mfDefaultSorter by="name">{{ colname[0] }}</mfDefaultSorter>
+        </th>
+        <th style="width: 25%">
+            <mfDefaultSorter by="model">{{ colname[1] }}</mfDefaultSorter>
+        </th>
+        <th style="width: 25%">
+            <mfDefaultSorter by="manufacturer">{{ colname[2] }}</mfDefaultSorter>
+        </th>
+        <th style="width: 25%">
+            <mfDefaultSorter by="vehicle_class">{{ colname[3] }}</mfDefaultSorter>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of mf.data">
+        <td>{{item[propname[0]]}}</td>
+        <td>{{item[propname[1]]}}</td>
+        <td>{{item[propname[2]]}}</td>
+        <td>{{item[propname[3]]}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4">
+            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+        </td>
+    </tr>
+    </tfoot>
+</table>
+</div>
+<!-- Table 2 -->
+<div>
+<table class="table table-striped" [mfData]="data1" #mf1="mfDataTable" [mfRowsOnPage]="5">
+    <thead>
+    <tr>
+        <th style="width: 25%">
+            <mfDefaultSorter by="name">Name</mfDefaultSorter>
+        </th>
+        <th style="width: 25%">
+            <mfDefaultSorter by="model">Model</mfDefaultSorter>
+        </th>
+        <th style="width: 25%">
+            <mfDefaultSorter by="manufacturer">Manufacturer</mfDefaultSorter>
+        </th>
+        <th style="width: 25%">
+            <mfDefaultSorter by="vehicle_class">Vehicle Class</mfDefaultSorter>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item1 of mf1.data">
+        <td>{{item1.name}}</td>
+        <td>{{item1.model}}</td>
+        <td>{{item1.manufacturer}}</td>
+        <td>{{item1.vehicle_class}}</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</div>

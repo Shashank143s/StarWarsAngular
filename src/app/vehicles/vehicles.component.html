@@ -1,0 +1,18 @@
+<div class="col-md-4 offset-md-5 padT" *ngIf="dataAvailable">
+  <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+</div>
+<div class="col-md-6 offset-md-3">
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let veh of vehicles">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{veh.name}}</h5>
+    </div>
+    <p class="mb-1"><em><b>Model:</b></em> {{veh.model}}</p>
+    <p class="mb-1"><em><b>Manufacturer:</b></em> {{veh.manufacturer}}</p>
+    <p class="mb-1"><em><b>Passengers:</b></em> {{veh.passengers}}</p>
+    <p class="mb-1"><em><b>Cargo Capacity:</b></em> {{veh.cargo_capacity}}</p>
+    <p class="mb-1"><em><b>Vehicle Class:</b></em> {{veh.vehicle_class}}</p>
+    <p class="mb-1"><em><b>Cost In Credits:</b></em> {{veh.cost_in_credits}}</p>
+  </a>
+</div>
+</div>

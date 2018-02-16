@@ -1,0 +1,8 @@
+app-list{
+  padding:10px;
+}
+
+.card-block{
+  max-height:450px;
+  overflow-y:scroll;
+}

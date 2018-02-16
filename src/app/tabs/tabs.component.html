@@ -1,0 +1,34 @@
+<!--div class="col-md-6 offset-md-3">
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/character/all" routerLinkActive="active">All</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/character/light" routerLinkActive="active">Light</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/character/dark" routerLinkActive="active">Dark</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+</div-->
+<div class="col-md-6 offset-md-3">
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/character/all" routerLinkActive="active">All</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/character/light" routerLinkActive="active">Light</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/character/dark" routerLinkActive="active">Dark</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-block">
+<router-outlet></router-outlet>
+  </div>
+</div>
+</div>

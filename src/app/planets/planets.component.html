@@ -1,0 +1,15 @@
+<div class="col-md-4 offset-md-5 padT" *ngIf="dataAvailable">
+  <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+</div>
+<div class="col-md-6 offset-md-3">
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let plan of planets">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{plan.name}}</h5>
+    </div>
+    <p class="mb-1"><em><b>Climate:</b></em> {{plan.climate}}</p>
+    <p class="mb-1"><em><b>Terrain:</b></em> {{plan.terrain}}</p>
+    <p class="mb-1"><em><b>Population:</b></em> {{plan.population}}</p>
+  </a>
+</div>
+</div>

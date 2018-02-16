@@ -1,0 +1,17 @@
+<div class="col-md-4 offset-md-5 padT" *ngIf="dataAvailable">
+  <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+</div>
+<div class="col-md-6 offset-md-3">
+<div class="card text-center" *ngFor="let mov of movies" >
+  <div class="card-header">
+    {{mov.title}}
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">Episode {{mov.episode_id}}</h4>
+    <p class="card-text">{{mov.opening_crawl}}</p>
+  </div>
+  <div class="card-footer text-muted">
+    Release Date: {{mov.release_date}}
+  </div>
+</div>
+</div>

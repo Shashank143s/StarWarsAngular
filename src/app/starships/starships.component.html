@@ -1,0 +1,18 @@
+<div class="col-md-4 offset-md-5 padT" *ngIf="dataAvailable">
+  <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+</div>
+<div class="col-md-6 offset-md-3">
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let stars of starships">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{stars.name}}</h5>
+    </div>
+    <p class="mb-1"><em><b>Model:</b></em> {{stars.model}}</p>
+    <p class="mb-1"><em><b>Manufacturer:</b></em> {{stars.manufacturer}}</p>
+    <p class="mb-1"><em><b>Passengers:</b></em> {{stars.passengers}}</p>
+    <p class="mb-1"><em><b>Cargo Capacity:</b></em> {{stars.cargo_capacity}}</p>
+    <p class="mb-1"><em><b>Hyperdrive Rating:</b></em> {{stars.hyperdrive_rating}}</p>
+    <p class="mb-1"><em><b>Starship Class:</b></em> {{stars.starship_class}}</p>
+  </a>
+</div>
+</div>

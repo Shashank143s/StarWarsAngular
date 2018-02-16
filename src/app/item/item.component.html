@@ -1,0 +1,21 @@
+  <div class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{character.name}}</h5>
+    </div>
+    <div style="text-align:right; width:100%">
+      <div style="display:inline-block;">
+      <p class="mb-1"><em>Gender:</em> {{character.gender}}</p>
+      <p class="mb-1"><em>Birth Year:</em> {{character.birth_year}}</p>
+      </div>
+      
+      <div style="display:inline-block;">
+      <p class="mb-1"><em>Height:</em> {{character.height}}</p>
+      <p class="mb-1"><em>Mass:</em> {{character.mass}}</p>
+      </div>
+      <br>
+      <button type="button" class="btn btn-primary" (click)="onAssign('light')">Light</button>
+      <button type="button" class="btn btn-danger" (click)="onAssign('dark')">Dark</button>
+      <button type="button" class="btn btn-warning" (click)="openModal()">Modal</button>
+      <app-modal *ngIf="showModal" (closeBtnEvnt)="closeBtnRcvd($event)" [modal]="character"></app-modal> 
+    </div>
+</div>
